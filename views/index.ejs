@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <form action="/info" method="post">
+        <label for="locationKey">Enter your Location:</label><br>
+        <input type="text" name="locationKey" id="1" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
+</body>
+</html>

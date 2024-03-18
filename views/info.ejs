@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info</title>
+    <link rel="stylesheet" href="/styles/info.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <div class="flex-container2">
+            <div class="currentConditions">
+                <p class="heading">Current Weather Conditions:</p>
+                <ul>
+                    <li><u>Location:</u> <%= data.Location %></li>
+                    <li><u>Latitude and Longitude of the place:</u> <%= data.GeoPosition %></li>
+                    <li><u>Time:</u> <%= data.Time %></li>
+                    <li><u>Temperature:</u> <%= data.Temperature %></li>
+                    <li><u>Brief Weather Description:</u> <%= data.WeatherText %></li>
+                    <li><u>Precipitation status:</u> <%= data.Precipitation %></li>
+                </ul>      
+            </div>
+            <div class="Forecast">
+                <p class="heading">Forecast Data:</p>
+                <ul>
+                    <li><u>Headline:</u> <%= data.Headline %></li>
+                    <li><u>Forecasted Date:</u> <%= data.Date %></li>
+                    <li><u>Minimum Temperature Prediction:</u> <%= data.minTemp %></li>
+                    <li><u>Maximum Temperature Prediction:</u> <%= data.maxTemp %></li>
+                    <li><u>Day Forecast:</u> <%= data.dayCondition %></li>
+                    <li><u>Precipitation Status in the day:</u> <%= data.dayPrecipitation%></li>
+                    <li><u>Night Forecast:</u> <%= data.nightCondition %></li>
+                    <li><u>Precipitation Status at night:</u> <%= data.nightPrecipitation %></li>                 
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
+</body>
+</html>
